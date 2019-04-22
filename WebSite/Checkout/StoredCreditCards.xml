@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CreditCards>
+  <CreditCard>
+    <Username>BeckyPayne</Username>
+    <Number>bca5aea9cf7b90736acf2bb8ab727681</Number>
+    <Expiry>5/1/2016 12:00:00 AM</Expiry>
+  </CreditCard>
+<CreditCard>
+  <Username>RapPayne</Username>
+  <Number>3a6383594b29b5d5cedb66de9968865e</Number>
+  <Expiry>7/1/2017 12:00:00 AM</Expiry>
+</CreditCard>
+  <CreditCard>
+    <Username>ChristinaPayne</Username>
+    <Number>afcd06ee1a206ccf902a6129893e963b</Number>
+    <Expiry>2017-05-01T00:00:00</Expiry>
+</CreditCard>
+</CreditCards>
