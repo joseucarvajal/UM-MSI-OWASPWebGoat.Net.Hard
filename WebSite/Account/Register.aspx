@@ -85,7 +85,16 @@
                             <br />
                             <asp:Label ID="Label3" runat="server" Text="Postal Code"></asp:Label><br />
                             <asp:TextBox ID="txtPostalCode" runat="server" CssClass="textEntry" MaxLength="10"></asp:TextBox>
-                            <br />
+                            <span style="color:red">
+                                <asp:RegularExpressionValidator 
+                                    ID="regularExp" 
+                                    ControlToValidate="txtPostalCode"
+                                    runat="server" 
+                                    ValidationExpression="[0-9]{5}"                                 
+                                    ErrorMessage="Invalid Zip Code.">
+                                </asp:RegularExpressionValidator>                                                            
+                            </span>     
+                            <br />                       
                             <asp:Label ID="Label4" runat="server" Text="Country"></asp:Label><br />
                             <asp:TextBox ID="txtCountry" runat="server" CssClass="textEntry" MaxLength="15"></asp:TextBox>
                             <br />

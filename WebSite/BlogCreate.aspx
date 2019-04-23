@@ -10,6 +10,15 @@
     <div>
         Title:<br />
         <asp:TextBox ID="txtTitle" class="blogCreateTitleText" runat="server"></asp:TextBox>
+        <div>
+            <asp:RequiredFieldValidator 
+                runat="server" 
+                ControlToValidate="txtTitle"
+                ErrorMessage="Title is required"
+                CssClass="error-message"
+                ID="reqTxtTitle">
+            </asp:RequiredFieldValidator>
+        </div>
     </div>
     <div>
         Contents:<br />

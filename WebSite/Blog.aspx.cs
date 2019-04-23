@@ -37,7 +37,7 @@ namespace WebSite
                 foreach (var blogResponse in blogEntry.Responses)
                 {
                     allEntries.Append("<div class='blogResponse'>\n");
-                    allEntries.AppendFormat("<div class='blogResponseContents'>{0}</div>\n", blogResponse.Contents);
+                    allEntries.AppendFormat("<div class='blogResponseContents'>{0}</div>\n", Microsoft.Security.Application.Encoder.HtmlEncode(blogResponse.Contents));
                     allEntries.AppendFormat("<div class='blogResponseSignature'>{0} - {1}</div>\n", blogResponse.Author, blogResponse.ResponseDate);
                     allEntries.Append("</div>\n");
                 }

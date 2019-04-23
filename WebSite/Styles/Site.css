@@ -419,3 +419,7 @@ table.Receipt tbody tr td.SubTotal
 {
     border-top: 3px solid;
 }
+
+.error-message{
+    color:red;
+}

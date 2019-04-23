@@ -21,9 +21,21 @@ namespace WebSite
                 connection.Open();
                 var title = txtTitle.Text;
                 var contents = txtContents.Text;
-                var insertSql = string.Format("insert into BlogEntries (Title, Contents, Author, PostedDate) values ('{0}','{1}','{2}',{3:yyyy-MM-dd}); select top 1 * from blogentries order by Id desc;",
-                    title, contents, User.Identity.Name, DateTime.Now);
+                var insertSql = @"
+            insert into BlogEntries (Title, Contents, Author, PostedDate) 
+            values(@Title, @Contents, @Author, @PostedDate); 
+            select top 1 * from blogentries ORDER BY ID DESC; ";
                 var insertCommand = new SqlCommand(insertSql, connection);
+                var p1 = insertCommand.Parameters.Add("@Title", SqlDbType.NVarChar, 50);
+                p1.Value = title;
+                var p2 = insertCommand.Parameters.Add("@Contents", SqlDbType.NVarChar,
+                contents.Length);
+                p2.Value = contents;
+                var p3 = insertCommand.Parameters.Add("@Author", SqlDbType.NVarChar, 50);
+                p3.Value = User.Identity.Name;
+                var p4 = insertCommand.Parameters.Add("@PostedDate", SqlDbType.DateTime);
+                p4.Value = DateTime.Now;
+
 
                 var dataReader = insertCommand.ExecuteReader();
                 lblFeedback.Text = "New blog entry was posted.<br />";

@@ -31,6 +31,15 @@ namespace WebSite {
         protected global::System.Web.UI.WebControls.TextBox txtTitle;
         
         /// <summary>
+        /// reqTxtTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqTxtTitle;
+        
+        /// <summary>
         /// txtContents control.
         /// </summary>
         /// <remarks>
